@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_times_table - return int
  *
@@ -16,29 +17,23 @@ for (i = 0; i <= n; i++)
 for (j = 0; j <= n; j++)
 {
 int mu = i * j;
-_putchar(mu);
+printf("%d", mu);
 if (j != n)
 {
 if (mu <= 9)
 {
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(' ');
+printf(",   ");
 }
 else if (mu <= 99)
 {
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
+printf(",  ");
 }
 else
 {
-_putchar(',');
-_putchar(' ');
+printf(", ");
 }
 }
 }
-_putchar('\n');
+printf("\n");
 }
 }
