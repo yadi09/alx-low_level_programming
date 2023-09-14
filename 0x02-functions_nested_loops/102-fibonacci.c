@@ -10,11 +10,11 @@ int main(void)
 {
 long i, a = 1, b = 2, c;
 printf("%ld, %ld, ", a, b);
-for (i = 0; i < 50; i++)
+for (i = 0; i <= 47; i++)
 {
 c = a + b;
 printf("%ld", c);
-if (i != 49)
+if (i != 47)
 printf(", ");
 a = b;
 b = c;
