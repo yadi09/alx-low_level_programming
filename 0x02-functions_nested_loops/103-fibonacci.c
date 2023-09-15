@@ -9,17 +9,17 @@
 int main(void)
 {
 unsigned long i, num1 = 0, num2 = 1, num;
-int sum;
+float sum;
 for (i = 1; i > 0; i++)
 {
 num = num1 + num2;
 if (num > 4000000)
 break;
 if ((num % 2) == 0)
-sum = sum +num;
+sum = sum + num;
 num1 = num2;
 num2 = num;
 }
-printf("%d\n", sum);
+printf("%.0f\n", sum);
 return (0);
 }
