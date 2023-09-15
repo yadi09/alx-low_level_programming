@@ -3,6 +3,7 @@
 /**
  * _isupper - is return int
  * this program  checks for uppercase character.
+ * @c: parameter
  * Return: 0;
  */
 int _isupper(int c)
