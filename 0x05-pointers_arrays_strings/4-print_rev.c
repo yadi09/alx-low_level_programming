@@ -9,10 +9,9 @@ void print_rev(char *s)
 {
 int max, i;
 if (*s == '\0')
-_putchar('e');
+return;
 max = strlen(s + 1);
 for (i = max; i >= 0; i--)
 _putchar(*(s + i));
 _putchar('\n');
-return;
 }
