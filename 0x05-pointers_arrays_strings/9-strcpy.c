@@ -7,10 +7,8 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-int i, max = 0;
-while (src[max] != '\0')
-max++;
-for (i = 0; i < max; i++)
+int i;
+for (i = 0; src[i] != '\0'; i++)
 {
 while (src[i] != '\0')
 {
