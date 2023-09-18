@@ -10,7 +10,10 @@ while (str[max] != '\0')
 max++;
 
 if (max % 2 != 0)
+{
 max = (max - 1) / 2;
+max++;
+}
 else
 max = max / 2;
 
