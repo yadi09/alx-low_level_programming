@@ -16,5 +16,6 @@ dest[i] = src[i];
 break;
 }
 }
+dest[i] = '\0';
 return (dest);
 }
