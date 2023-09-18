@@ -8,7 +8,7 @@
 int main(void)
 {
 char *str;
-str = "Holberton!";
+str = "Holber ton!";
 puts_half(str);
 return (0);
 }
