@@ -15,7 +15,7 @@ int max = 0;
 while (strpass[max] != '\0')
 max++;
 srand(time(NULL));
-for (i = 0; i < 15; i++)
+for (i = 0; i < 14; i++)
 {
 randindex = rand() % max;
 pass[i] = strpass[randindex];
