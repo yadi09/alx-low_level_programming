@@ -10,7 +10,7 @@ int main(void)
 int i = 0;
 int randindex;
 char pass[50];
-char strpass[] = "abcdefghijklmnopqrsABCDEFGHIJKLMNOPQRS1234567890£$%&()";
+char strpass[] = "abcdefghi jklmnopqrsABCDEFGHIJKLMNOPQRS1234567890£$%&()";
 int max = 0;
 while (strpass[max] != '\0')
 max++;
