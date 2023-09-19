@@ -7,14 +7,19 @@
  */
 int main(void)
 {
-int i;
+int i = 0;
 int randindex;
-char pass[8];
+char pass[50];
 char strpass[] = "abcABCDEF7890defghijklmnopqrs123456GHIJKLMNOPQRS!@#$%ì&*()";
+int max = 0;
+
+while (strpass[max] != '\0')
+max++;
+
 srand(time(NULL));
 for (i = 0; i < 8; i++)
 {
-randindex = rand() % (sizeof(strpass) - 1);
+randindex = rand() % max;
 pass[i] = strpass[randindex];
 }
 printf("rand passwd : %s\n", pass);
