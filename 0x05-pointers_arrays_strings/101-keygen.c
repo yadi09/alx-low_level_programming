@@ -8,14 +8,13 @@
 int main(void)
 {
 int i;
-int length = 8;
 int randindex;
-char pass[length];
+char pass[8];
 char strpass[] = "abcABCDEF7890defghijklmnopqrs123456GHIJKLMNOPQRS!@#$%ì&*()";
 srand(time(NULL));
-for (i = 0; i < length; i++)
+for (i = 0; i < 8; i++)
 {
-randindex = rand() % length;
+randindex = rand() % (sizeof(strpass) - 1);
 pass[i] = strpass[randindex];
 }
 printf("rand passwd : %s\n", pass);
