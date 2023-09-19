@@ -10,14 +10,12 @@ int main(void)
 int i = 0;
 int randindex;
 char pass[50];
-char strpass[] = "abcABCDEF7890defghijklmnopqrs123456GHIJKLMNOPQRS!@#$%ì&*()";
+char strpass[] = "abcdefghijklmnopqrsABCDEFGHIJKLMNOPQRS1234567890£$%&()";
 int max = 0;
-
 while (strpass[max] != '\0')
 max++;
-
 srand(time(NULL));
-for (i = 0; i < 8; i++)
+for (i = 0; i < 15; i++)
 {
 randindex = rand() % max;
 pass[i] = strpass[randindex];
