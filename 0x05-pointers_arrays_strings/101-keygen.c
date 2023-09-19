@@ -10,14 +10,14 @@ int main(void)
 int i;
 int length = 8;
 int randindex;
-char randpasswd[length];
-char strpass[] = "abcdefghijklmnopqrsABCDEFGHIJKLMNOPQRS1234567890!@#$%ì&*()";
+char pass[length];
+char strpass[] = "abcABCDEF7890defghijklmnopqrs123456GHIJKLMNOPQRS!@#$%ì&*()";
 srand(time(NULL));
 for (i = 0; i < length; i++)
 {
 randindex = rand() % length;
-randpasswd[i] = strpass[randindex];
+pass[i] = strpass[randindex];
 }
-printf("rand passwd : %s", randpasswd);
+printf("rand passwd : %s\n", pass);
 return (0);
 }
