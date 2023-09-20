@@ -9,7 +9,7 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-  int dmax, dsrt = 0, i;
+int dmax, dsrt = 0, i;
 while (dest[dsrt] != '\0')
 dsrt++;
 dmax = sizeof(dest);
