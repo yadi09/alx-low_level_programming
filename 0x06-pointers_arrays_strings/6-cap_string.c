@@ -8,6 +8,9 @@ char *cap_string(char *str)
 {
 char *str1 = str;
 
+if (str1[0] >= 97 && str1[0] <= 122)
+str[0] = str1[0] - 32;
+
 while (*str1 != '\0')
 {
 if (*str1 == ' ' || *str1 == '.' || *str1 == ')' || *str1 == '\t'
@@ -19,19 +22,8 @@ str1++;
 
 if (*str1 >= 97 && *str1 <= 122)
 {
-if (*str1 >= 97 && *str1 <= 122)
-{
 *str1 = *str1 - 32;
 str1++;
-}
-}
-else if (*str1 >= 65 && *str1 <= 90)
-{
-if (*str1 >= 97 && *str1 <= 122)
-{
-*str1 = *str1 - 32;
-str1++;
-}
 }
 }
 else
