@@ -10,7 +10,7 @@ int i = n;
 if (n < 0)
 {
 _putchar(45);
-i = -i;
+i = i * -1;
 }
 if (i / 10)
 {
