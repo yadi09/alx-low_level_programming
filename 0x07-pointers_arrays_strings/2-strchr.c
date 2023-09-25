@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
  * _strchr - function
  * @s: parameter
  * @c: parameter
  * Return: 0;
  */
+
 char *_strchr(char *s, char c)
 {
 int i;
@@ -19,5 +21,8 @@ return (s);
 s++;
 }
 
+if (*s == c)
+return (s);
+else
 return (NULL);
 }
