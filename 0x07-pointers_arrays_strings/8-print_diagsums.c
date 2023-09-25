@@ -24,6 +24,6 @@ j = a[i];
 num2 += j;
 i += (size - 1);
 }
-printf("%d, %d\n", num, num2);
+printf("%i, %i\n", num, num2);
 
 }
