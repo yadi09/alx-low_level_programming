@@ -11,7 +11,7 @@ unsigned int j = 0, i = 0;
 
 while (*(haystack) != '\0')
 {
-while (haystack[i] == needle[0])
+while (needle[j] && haystack[i] == needle[0])
 {
 if (haystack[i + j] == needle[j])
 j++;
