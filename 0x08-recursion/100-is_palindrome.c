@@ -24,7 +24,9 @@ return (_strlen(++s) + 1);
 
 int is_same(char *s, int n, int num)
 {
-if (n == 0 || n < num)
+if (n == 0 && n < num)
+return (1);
+else if (n < num && n % 2 != 0)
 return (1);
 else if (*s == *(s + n - 1))
 return (is_same(++s, n - 2, num) * 1);
