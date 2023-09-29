@@ -1,8 +1,10 @@
 #include "main.h"
 /**
  * check - function
- * @str0: parameter
  * @str1: parameter
+ * @str2: parameter
+ * @i: parameter
+ * @j: parameter
  * Return: 0;
  */
 
