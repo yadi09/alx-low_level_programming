@@ -8,22 +8,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-int i = 0, j = 0;
 int num = 0, num2 = 0;
-
-while (i < (size * size))
+int i = 0;
+while (i < size)
 {
-j = a[i];
-num += num + j;
-i += size + 1;
+num = num + a[i * size + i];
+i++;
 }
-i = size - 1;
-while (i < ((size * size) - 1))
+for (i = size - 1; i >= 0; i++)
 {
-j = a[i];
-num2 += j;
-i += (size - 1);
+num2 += a[i * size + (size - i - 1)];
 }
-printf("%i, %i\n", num, num2);
-
+printf("%d, %d\n", num, num2);
 }
