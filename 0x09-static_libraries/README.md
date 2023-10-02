@@ -1,0 +1,1 @@
+This directory 0x09-static_libraries  hold all task with the thire solution
