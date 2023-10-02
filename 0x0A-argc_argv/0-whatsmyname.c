@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
  * main - argc and argv
+ * @argc: command line argument
+ * @argv: command line argument
  * Return: 0;
  */
 
