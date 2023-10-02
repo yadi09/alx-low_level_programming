@@ -1,0 +1,14 @@
+#include <stdio.h>
+/**
+ * main - print noumber of argumment
+ * @argc: command line argument
+ * @argv: command line argument
+ * Return: 0;
+ */
+
+int main(int argc, __attribute__((unused)) int *argv[])
+{
+printf("%s\n", argc);
+
+return(0);
+}
