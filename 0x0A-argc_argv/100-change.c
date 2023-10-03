@@ -10,8 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-int i, cent, _coins = 0, num_coins;
-__attribute__((unused)) int values[] = {25, 10, 5, 2, 1};
+int coin = 0, cent;
+
 if (argc != 2)
 {
 printf("Error\n");
@@ -19,19 +19,35 @@ return (1);
 }
 
 cent = atoi(argv[1]);
-_coins = 0;
 
-for (i = 0; i < 5; i++)
+while (cent > 0)
 {
-num_coins = cent / values[i];
+coin++;
 
-cent %= values[i];
-_coins += num_coins;
-
-if (cent == 0)
-break;
+if ((cent - 25) >= 0)
+{
+cent -= 25;
+continue;
 }
-printf("%d\n", _coins);
+if ((cent - 10) >= 0)
+{
+cent -= 10;
+continue;
+}
+if ((cent - 5) >= 0)
+{
+cent -= 5;
+continue;
+}
+if ((cent - 2) >= 0)
+{
+cent -= 2;
+continue;
+}
+cent--;
+
+}
+printf("%d\n", coin);
 
 return (0);
 }
