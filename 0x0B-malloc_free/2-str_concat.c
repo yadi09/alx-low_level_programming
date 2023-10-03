@@ -12,10 +12,17 @@ char *str_concat(char *s1, char *s2)
 int i, j, sum, max = 0, max2 = 0;
 char *str;
 
+if (s1 != NULL)
+{
 while (*(s1 + max) != '\0')
 max++;
+}
+
+if (s2 != NULL)
+{
 while (*(s2 + max2) != '\0')
 max2++;
+}
 
 sum = max + max2;
 
