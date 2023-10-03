@@ -17,11 +17,14 @@ while (*(str + max) != '\0')
 max++;
 
 ptr = (char *)malloc(sizeof(char) * max);
+
 if (ptr == NULL)
 return ('\0');
 else
+{
 for (i = 0; i < max; i++)
 ptr[i] = str[i];
+}
 
 return (ptr);
 }
