@@ -15,6 +15,7 @@ return ('\0');
 
 while (*(str + max) != '\0')
 max++;
+max++;
 
 ptr = (char *)malloc(sizeof(char) * max);
 
