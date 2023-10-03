@@ -9,7 +9,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-int i, sum, max = 0, max2 = 0;
+int i, j, sum, max = 0, max2 = 0;
 char *str;
 
 while (*(s1 + max) != '\0')
@@ -24,14 +24,10 @@ str = (char *)malloc(sizeof(char) * (sum + 1));
 if (str == NULL)
 return ('\0');
 
-for (i = 0; i < sum; i++)
-{
-if (i < max)
+for (i = 0; i < max; i++)
 str[i] = s1[i];
-else if (s2[i - max] != '\0')
-str[i] = s2[i - max];
-else
-str[i] = '\0';
-}
+
+for (j = 0; j < max2; j++, i++)
+str[i] = s2[j];
 return (str);
 }
