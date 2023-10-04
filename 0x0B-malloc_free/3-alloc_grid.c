@@ -23,7 +23,7 @@ for (i = 0; i < height; i++)
 arr_2d[i] = (int *)malloc(sizeof(int) * width);
 if (arr_2d[i] == NULL)
 {
-for (--i; i >= 0; i--)
+for (j = --i; j >= 0; j--)
 free(arr_2d[i]);
 free(arr_2d);
 return ('\0');
