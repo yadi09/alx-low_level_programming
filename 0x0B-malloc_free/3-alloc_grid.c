@@ -14,7 +14,7 @@ int i, j, **arr_2d;
 if (width <= 0 || height <= 0)
 return ('\0');
 
-arr_2d = malloc(sizeof(int *) * height);
+arr_2d = (int **)malloc(sizeof(int *) * height);
 if (arr_2d == NULL)
 return ('\0');
 
@@ -23,6 +23,7 @@ for (i = 0; i < height; i++)
 arr_2d[i] = (int *)malloc(sizeof(int) * width);
 if (arr_2d[i] == NULL)
 {
+for (j = i; j >= 0; j--)
 free(arr_2d[i]);
 free(arr_2d);
 return ('\0');
