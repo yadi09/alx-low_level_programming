@@ -9,29 +9,29 @@
 
 char *argstostr(int ac, char **av)
 {
-int i, j, k = 0, sum = ac;
-int *max;
+int i, j, k = 0;
+int max;
 char *str;
+
 if (ac == 0 || av == NULL)
 return (NULL);
-max = (int *)malloc(sizeof(int) * ac);
-if (max == NULL)
-return ('\0');
-for (i = 0; i < ac; i++)
-max[i] = 0;
+
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
-max[i]++;
-sum += max[i];
+max++;
+max++;
 }
-str = (char *)malloc(sizeof(char) * sum);
+
+str = (char *)malloc(sizeof(char) * max);
+
 if (str == NULL)
 return (NULL);
+
 for (i = 0; i < ac; i++)
 {
 j = 0;
-while (j < max[i])
+while (j < max && av[i][j] != '\0')
 {
 *str = av[i][j];
 str++;
@@ -43,6 +43,6 @@ str++;
 k++;
 }
 str = str - k;
-free(max);
+
 return (str);
 }
