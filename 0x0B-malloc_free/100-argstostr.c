@@ -23,7 +23,7 @@ max++;
 max++;
 }
 
-str = (char *)malloc(sizeof(char) * max);
+ str = (char *)malloc((max + 1) * sizeof(char));
 
 if (str == NULL)
 return (NULL);
@@ -42,6 +42,7 @@ k++;
 str++;
 k++;
 }
+
 str = str - k;
 
 return (str);
