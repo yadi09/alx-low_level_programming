@@ -15,21 +15,16 @@ if (width <= 0 || height <= 0)
 return ('\0');
 
 arr_2d = malloc(sizeof(int *) * height);
-
 if (arr_2d == NULL)
-{
-free(arr_2d);
 return ('\0');
-}
-
-for (i = 0; i < height; i++)
-arr_2d[i] = (int *)malloc(sizeof(int) * width);
 
 for (i = 0; i < height; i++)
 {
+arr_2d[i] = (int *)malloc(sizeof(int) * width);
 if (arr_2d[i] == NULL)
 {
 free(arr_2d[i]);
+free(arr_2d);
 return ('\0');
 }
 }
