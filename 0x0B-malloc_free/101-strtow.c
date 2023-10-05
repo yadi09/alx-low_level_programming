@@ -14,7 +14,7 @@ while (str[i] != '\0')
 {
 if (str[i] != 32)
 {
-while (str[i] != '\0')
+while (1)
 {
 if (str[i] == 32 || str[i] == '\0')
 {
@@ -75,6 +75,10 @@ char **strtow(char *str)
 int i = 0, l = 0, k = 1, string;
 char **txt;
 char **text;
+
+if (str == NULL)
+return ('\0');
+
 string = get_max(str);
 
 text = malloc(sizeof(char *) * string);
