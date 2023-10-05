@@ -23,6 +23,8 @@ break;
 }
 i++;
 }
+if (str[i] == '\0')
+break;
 }
 i++;
 }
