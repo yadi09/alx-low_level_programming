@@ -82,6 +82,8 @@ if (str == NULL)
 return ('\0');
 
 string = get_max(str);
+if (string == 0)
+return ('\0');
 
 text = malloc(sizeof(char *) * string);
 if (text == NULL)
