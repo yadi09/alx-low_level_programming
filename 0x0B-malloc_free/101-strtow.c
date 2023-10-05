@@ -85,7 +85,7 @@ string = get_max(str);
 if (string == 0)
 return ('\0');
 
-text = malloc(sizeof(char *) * string);
+text = malloc(sizeof(char *) * string + 15);
 if (text == NULL)
 return ('\0');
 
