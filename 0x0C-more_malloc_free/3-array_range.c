@@ -15,7 +15,13 @@ int *ptr;
 if (min > max)
 return ('\0');
 
-num = ((max - min) + 1);
+while (min <= max)
+{
+num++;
+min++;
+}
+min = min - num;
+
 ptr = malloc(num *sizeof(int));
 
 if (ptr == NULL)
