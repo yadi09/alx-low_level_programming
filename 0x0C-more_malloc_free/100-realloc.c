@@ -22,6 +22,15 @@ return ('\0');
 if (new_size == old_size)
 return (ptr);
 
+if (ptr == NULL)
+{
+ptr2 = malloc(new_size);
+if (ptr2 == NULL)
+return (NULL);
+}
+
+if (new_size > old_size && (ptr != NULL))
+{
 ptr2 = malloc(new_size);
 
 if (ptr2 == NULL)
@@ -31,6 +40,7 @@ for (i = 0; i < old_size; i++)
 ptr2[i] = *((char *)ptr + i);
 
 free(ptr);
+}
 
 return (ptr2);
 }
