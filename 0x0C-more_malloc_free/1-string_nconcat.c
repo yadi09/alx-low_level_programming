@@ -14,8 +14,10 @@ unsigned int i, j;
 unsigned int max = 0, max2 = 0;
 char *ptr;
 
-if (s1 == NULL && s2 == NULL)
-return ('\0');
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
 
 while (s1[max] != '\0')
 max++;
