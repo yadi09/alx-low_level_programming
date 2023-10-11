@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * prt_opcode - program
+ * ptr_opcode - program prints the opcodes of its own main function.
  * @ptr: parameter
  * @byt: parameter
  * Return: void
