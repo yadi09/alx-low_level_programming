@@ -15,17 +15,13 @@ char *ptr;
 va_list str;
 va_start(str, n);
 
-if (separator != NULL)
-{
 for (i = 0; i < (int)n; i++)
 {
+if (separator != NULL && i != 0)
+printf("%s", separator);
 ptr = va_arg(str, char*);
 printf("%s", (ptr != NULL) ? ptr : "(nil)");
-if (i != (int)(n - 1))
-printf("%s", separator);
-else
+}
 printf("\n");
-}
-}
 va_end(str);
 }
