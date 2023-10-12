@@ -20,8 +20,7 @@ printf("%d", va_arg(num, int));
 
 if (separator != NULL && i != (int)(n - 1))
 printf("%s", separator);
-else
-printf("\n");
 }
+printf("\n");
 va_end(num);
 }
