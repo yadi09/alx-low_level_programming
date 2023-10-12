@@ -27,4 +27,5 @@ else
 printf("\n");
 }
 }
+va_end(str);
 }
