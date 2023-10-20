@@ -1,17 +1,17 @@
 #include "lists.h"
 
 /**
- * print_list - ...
+ * print_list - ..
  * @h: ..
  * Return: number of nodes
-*/
+ **/
 
 size_t print_list(const list_t *h)
 {
     size_t n = 0;
 
-    if (h == NULL)
-    return (-1);
+	if (h == NULL)
+	return (-1);
 
     while (h != NULL)
     {
@@ -24,5 +24,5 @@ size_t print_list(const list_t *h)
         h = h->next;
     }
 
-    return (n);
+	return (n);
 }
