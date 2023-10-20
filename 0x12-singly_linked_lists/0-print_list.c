@@ -8,15 +8,19 @@
 
 size_t print_list(const list_t *h)
 {
-    long unsigned int n = 0;
+    size_t n = 0;
 
     if (h == NULL)
     return (-1);
 
     while (h != NULL)
     {
-        n++;
+        if (h->str == NULL)
+        printf("[%d] %s\n", 0, "(nil)");
+        else
         printf("[%d] %s\n", h->len, h->str);
+        
+        n++;
         h = h->next;
     }
 
