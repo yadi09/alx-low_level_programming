@@ -24,12 +24,13 @@ dupstr = strdup(str);
 while (dupstr[count] != '\0')
 count++;
 
-newnode->str = malloc(sizeof(char) * count);
+newnode->str = malloc(sizeof(char) * (count+ 1));
 
 if (newnode->str == NULL)
 return ('\0');
 
 newnode->str = dupstr;
+newnode->str[count] = '\0';
 newnode->next = *head;
 newnode->len = count;
 *head = newnode;
