@@ -30,5 +30,5 @@ newnode->next = *head;
 newnode->len = count;
 *head = newnode;
 
-    return (*head);
+return (*head);
 }
