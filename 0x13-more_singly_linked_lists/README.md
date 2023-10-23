@@ -83,6 +83,39 @@ This function can be used to add a new node with a specified value at the beginn
 
 
 
+   ***Task 3***
+Write a function that adds a new node at the end of a listint_t list.
+
+Prototype: listint_t *add_nodeint_end(listint_t **head, const int n);
+Return: the address of the new element, or NULL if it failed
+
+The function named `add_nodeint_end` that adds a new node at the end of a linked list of integers. Here's a breakdown of how the code works:
+
+1. The function `add_nodeint_end` takes two parameters: `**head`, a pointer to a pointer to the head of the linked list, and `n`, the value to be assigned to the new node.
+
+2. A temporary pointer `temp` is created and assigned the value of `*head`, which points to the head of the linked list. This pointer will be used to traverse the list.
+
+3. A new node is created using `malloc` to allocate memory for the `listint_t` struct. The `sizeof(listint_t)` is used to determine the size of the struct.
+
+4. The code checks if the memory allocation was successful by verifying if `newnode` is `NULL`. If it is, indicating a failed allocation, the function returns `NULL` to indicate the failure.
+
+5. If the memory allocation was successful, the value `n` is assigned to the `n` member of the new node, representing the data stored in the node.
+
+6. The `next` member of the new node is set to `NULL`, as it will be the last node in the list.
+
+7. The code then checks if the current list is empty by verifying if `*head` is `NULL`. If it is, indicating an empty list, the `*head` pointer is updated to point to the new node, making it the new head of the list.
+
+8. If the list is not empty, the code enters a loop to find the last node in the list. The loop continues as long as `temp->next` is not `NULL`, indicating there are more nodes to traverse.
+
+9. Inside the loop, `temp` is updated to point to the next node in the list, effectively traversing the list.
+
+10. Once the loop ends, `temp` points to the last node in the list. The `next` member of `temp` is updated to point to the new node, making it the new last node.
+
+11. Finally, the function returns the pointer to the new node.
+
+This function can be used to add a new node with a specified value at the end of a linked list of integers, updating the appropriate pointers accordingly.
+
+
    **Conclusion**
 
 The single linked list is a versatile data structure that can be used to implement a variety of algorithms and applications. The implementation in this file is simple and efficient, and it provides a comprehensive API for managing single linked lists.
