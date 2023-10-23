@@ -116,6 +116,34 @@ The function named `add_nodeint_end` that adds a new node at the end of a linked
 This function can be used to add a new node with a specified value at the end of a linked list of integers, updating the appropriate pointers accordingly.
 
 
+   ***Task 4***
+Write a function that frees a listint_t list.
+
+Prototype: void free_listint(listint_t *head);
+
+The function named `free_listint` that frees the memory allocated for a linked list of integers. Here's a breakdown of how the code works:
+
+1. The function `free_listint` takes a single parameter `head`, which is a pointer to the head of the linked list (`listint_t` is assumed to be a struct representing a node in the linked list).
+
+2. Inside the function, a temporary pointer `temp` is declared to keep track of the next node while freeing the current node.
+
+3. The code enters a while loop that continues as long as the current node `head` is not NULL, indicating that there are more nodes to process.
+
+4. Inside the loop, the code assigns the value of `head->next` to `temp` to store the pointer to the next node.
+
+5. The `free` function is called to deallocate the memory of the current node (`free(head)`).
+
+6. The `head` pointer is updated to point to the next node (`head = temp`), effectively moving to the next node in the list.
+
+7. Steps 4-6 are repeated until all nodes in the linked list have been freed.
+
+8. Once the loop ends, all nodes in the linked list have been freed, and the memory is released.
+
+This function can be used to free the memory allocated for a linked list of integers, preventing memory leaks.
+
+
+   ***Task 5***
+
    **Conclusion**
 
 The single linked list is a versatile data structure that can be used to implement a variety of algorithms and applications. The implementation in this file is simple and efficient, and it provides a comprehensive API for managing single linked lists.
