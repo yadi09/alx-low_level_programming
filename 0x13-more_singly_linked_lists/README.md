@@ -231,8 +231,51 @@ The function named `get_nodeint_at_index` that retrieves a node at a specified i
 This function can be used to retrieve the node at a specified index in a linked list of integers. If the index is valid, the function returns the pointer to the node; otherwise, it returns `NULL`.
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+   ***Task 8***
+- Write a function that returns the sum of all the data (n) of a listint_t linked list.
+
+- Prototype: int sum_listint(listint_t *head);
+- if the list is empty, return 0
+
+The function named `sum_listint` that calculates the sum of all the integer values in a linked list. The code appears to be correct, and there are no apparent issues or errors with the implementation.
+
+Here's a breakdown of how the code works:
+
+1. The function `sum_listint` takes a single parameter `head`, which is a pointer to the head of the linked list.
+
+2. An integer variable `sum` is initialized to 0, which will be used to store the sum of the values in the linked list.
+
+3. A temporary pointer `temp` is created and assigned the value of `head`, which points to the head of the linked list. This pointer will be used to traverse the list.
+
+4. The code enters a while loop that continues as long as `temp` is not `NULL`, indicating that there are more nodes to process.
+
+5. Inside the loop, the value of the current node (`temp->n`) is added to the `sum` variable.
+
+6. The `temp` pointer is updated to point to the next node in the list, effectively traversing the list.
+
+7. Steps 5-6 are repeated until all nodes in the linked list have been processed.
+
+8. Once the loop ends, `temp` becomes `NULL`, indicating that the end of the list has been reached.
+
+9. The function returns the value stored in `sum`, which represents the sum of all the values in the linked list.
+
+If the linked list is properly constructed and the `n` values in the nodes are valid integers, the code should correctly calculate the sum of the values and return it.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   ***TASK 9***
+- Write a function that inserts a new node at a given position.
+
+- Prototype: listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+- where idx is the index of the list where the new node should be added. Index starts at 0
+- Returns: the address of the new node, or NULL if it failed
+- if it is not possible to add the new node at index idx, do not add the new node and return NULL
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    **Conclusion**
 
 The single linked list is a versatile data structure that can be used to implement a variety of algorithms and applications. The implementation in this file is simple and efficient, and it provides a comprehensive API for managing single linked lists.
