@@ -32,6 +32,28 @@ The function named `print_listint` that prints the elements of a linked list of 
 This function can be used to print the elements of a linked list of integers and determine the number of nodes in the list.
 
 
+   ***Task 1***
+Write a function that returns the number of elements in a linked listint_t list.
+
+Prototype: size_t listint_len(const listint_t *h);
+
+The function named `listint_len` that calculates the number of elements (nodes) in a linked list. Here's a breakdown of how the code works:
+
+1. The function `listint_len` takes a single parameter `h`, which is a pointer to the head of the linked list (`listint_t` is assumed to be a struct representing a node in the linked list).
+
+2. The variable `num_of_elemrnt` is initialized to 0. This variable will keep track of the number of elements (nodes) in the linked list.
+
+3. The code enters a while loop that continues as long as the current node `h` is not NULL, indicating that there are more nodes to process.
+
+4. Inside the loop, the code updates the value of `h` to point to the next node in the linked list (`h = h->next`), effectively traversing the list.
+
+5. The variable `num_of_elemrnt` is incremented by 1 to count the current node as an element in the linked list.
+
+6. Once the loop ends, all nodes in the linked list have been traversed, and the total number of elements is stored in `num_of_elemrnt`.
+
+7. The function returns the value of `num_of_elemrnt`, which represents the number of elements (nodes) in the linked list.
+
+This function can be used to determine the number of elements in a linked list.
 
 
    **Conclusion**
