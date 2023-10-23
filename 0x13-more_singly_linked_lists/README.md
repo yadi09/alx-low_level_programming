@@ -143,6 +143,62 @@ This function can be used to free the memory allocated for a linked list of inte
 
 
    ***Task 5***
+Write a function that frees a listint_t list.
+
+Prototype: void free_listint2(listint_t **head);
+The function sets the head to NULL
+
+The function named `free_listint2` that frees the memory allocated for a linked list of integers and sets the head pointer to `NULL`. Here's a breakdown of how the code works:
+
+1. The function `free_listint2` takes a single parameter `head`, which is a pointer to a pointer to the head of the linked list (`listint_t` is assumed to be a struct representing a node in the linked list).
+
+2. Inside the function, a temporary pointer `temp` is declared to keep track of the next node while freeing the current node.
+
+3. The code enters a while loop that continues as long as the pointer `*head` is not NULL, indicating that there are more nodes to process.
+
+4. Inside the loop, the code assigns the value of `(*head)->next` to `temp` to store the pointer to the next node.
+
+5. The `free` function is called to deallocate the memory of the current node (`free(*head)`).
+
+6. The `*head` pointer is updated to point to the next node (`*head = temp`), effectively moving to the next node in the list.
+
+7. Steps 4-6 are repeated until all nodes in the linked list have been freed.
+
+8. Once the loop ends, all nodes in the linked list have been freed, and the memory is released.
+
+9. Finally, after freeing all the nodes, the function sets the external head pointer (`**head`) to `NULL`, indicating that the list is now empty.
+
+This function can be used to free the memory allocated for a linked list of integers, while also ensuring that the head pointer is properly updated to `NULL` after freeing all the nodes.
+
+
+
+   ***Task 6***
+Write a function that deletes the head node of a listint_t linked list, and returns the head node’s data (n).
+
+Prototype: int pop_listint(listint_t **head);
+if the linked list is empty return 0
+
+
+The function named `pop_listint` that removes the head node from a linked list of integers and returns its value. Here's a breakdown of how the code works:
+
+1. The function `pop_listint` takes a single parameter `head`, which is a pointer to a pointer to the head of the linked list (`listint_t` is assumed to be a struct representing a node in the linked list).
+
+2. A temporary pointer `temp` is created and assigned the value of `*head`, which points to the head of the linked list. This pointer will be used to free the memory of the head node later.
+
+3. An integer variable `te_mp` is created and assigned the value of `(*head)->n`, which represents the data stored in the head node.
+
+4. The code checks if the list is empty by verifying if `*head` is `NULL`. If it is, indicating an empty list, the function returns 0 to indicate the failure of popping an element.
+
+5. If the list is not empty, the head pointer (`*head`) is updated to point to the next node in the list, effectively removing the current head node.
+
+6. The memory of the previous head node, pointed to by `temp`, is freed using the `free` function.
+
+7. Finally, the function returns the value stored in `te_mp`, which represents the data of the popped head node.
+
+This function can be used to remove the head node from a linked list of integers, freeing its memory and returning its value.
+
+
+
 
    **Conclusion**
 
