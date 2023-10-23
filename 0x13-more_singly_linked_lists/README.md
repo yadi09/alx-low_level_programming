@@ -3,14 +3,14 @@
 This file contains the implementation of a single linked list data structure. A single linked list is a linear data structure that stores a sequence of elements. Each element in the list contains a value and a pointer to the next element in the list.
 
 
-
+------------------------------------------------------------------------------------------------------
    ***Task 0***
 - Write a function that prints all the elements of a listint_t list.
 
-. Prototype: size_t print_listint(const listint_t *h);
-. Return: the number of nodes
-. Format: see example
-. You are allowed to use printf
+- Prototype: size_t print_listint(const listint_t *h);
+- Return: the number of nodes
+- Format: see example
+- You are allowed to use printf
 
 
 The function named `print_listint` that prints the elements of a linked list of integers and returns the number of nodes in the list. Here's a breakdown of how the code works:
@@ -34,11 +34,11 @@ The function named `print_listint` that prints the elements of a linked list of 
 This function can be used to print the elements of a linked list of integers and determine the number of nodes in the list.
 
 
-
+------------------------------------------------------------------------------------------------------------------------------------------
    ***Task 1***
-Write a function that returns the number of elements in a linked listint_t list.
+- Write a function that returns the number of elements in a linked listint_t list.
 
-Prototype: size_t listint_len(const listint_t *h);
+- Prototype: size_t listint_len(const listint_t *h);
 
 The function named `listint_len` that calculates the number of elements (nodes) in a linked list. Here's a breakdown of how the code works:
 
@@ -58,12 +58,12 @@ The function named `listint_len` that calculates the number of elements (nodes) 
 
 This function can be used to determine the number of elements in a linked list.
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------
    ***Task 2***
-Write a function that adds a new node at the beginning of a listint_t list.
+- Write a function that adds a new node at the beginning of a listint_t list.
 
-Prototype: listint_t *add_nodeint(listint_t **head, const int n);
-Return: the address of the new element, or NULL if it failed
+- Prototype: listint_t *add_nodeint(listint_t **head, const int n);
+- Return: the address of the new element, or NULL if it failed
 
 The function named `add_nodeint` that adds a new node at the beginning of a linked list of integers. Here's a breakdown of how the code works:
 
@@ -82,12 +82,12 @@ The function named `add_nodeint` that adds a new node at the beginning of a link
 This function can be used to add a new node with a specified value at the beginning of a linked list of integers, updating the head pointer accordingly.
 
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------
    ***Task 3***
-Write a function that adds a new node at the end of a listint_t list.
+- Write a function that adds a new node at the end of a listint_t list.
 
-Prototype: listint_t *add_nodeint_end(listint_t **head, const int n);
-Return: the address of the new element, or NULL if it failed
+- Prototype: listint_t *add_nodeint_end(listint_t **head, const int n);
+- Return: the address of the new element, or NULL if it failed
 
 The function named `add_nodeint_end` that adds a new node at the end of a linked list of integers. Here's a breakdown of how the code works:
 
@@ -115,11 +115,11 @@ The function named `add_nodeint_end` that adds a new node at the end of a linked
 
 This function can be used to add a new node with a specified value at the end of a linked list of integers, updating the appropriate pointers accordingly.
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------
    ***Task 4***
-Write a function that frees a listint_t list.
+- Write a function that frees a listint_t list.
 
-Prototype: void free_listint(listint_t *head);
+- Prototype: void free_listint(listint_t *head);
 
 The function named `free_listint` that frees the memory allocated for a linked list of integers. Here's a breakdown of how the code works:
 
@@ -141,12 +141,12 @@ The function named `free_listint` that frees the memory allocated for a linked l
 
 This function can be used to free the memory allocated for a linked list of integers, preventing memory leaks.
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------
    ***Task 5***
-Write a function that frees a listint_t list.
+- Write a function that frees a listint_t list.
 
-Prototype: void free_listint2(listint_t **head);
-The function sets the head to NULL
+- Prototype: void free_listint2(listint_t **head);
+- The function sets the head to NULL
 
 The function named `free_listint2` that frees the memory allocated for a linked list of integers and sets the head pointer to `NULL`. Here's a breakdown of how the code works:
 
@@ -171,12 +171,12 @@ The function named `free_listint2` that frees the memory allocated for a linked 
 This function can be used to free the memory allocated for a linked list of integers, while also ensuring that the head pointer is properly updated to `NULL` after freeing all the nodes.
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
    ***Task 6***
-Write a function that deletes the head node of a listint_t linked list, and returns the head node’s data (n).
+- Write a function that deletes the head node of a listint_t linked list, and returns the head node’s data (n).
 
-Prototype: int pop_listint(listint_t **head);
-if the linked list is empty return 0
+- Prototype: int pop_listint(listint_t **head);
+- if the linked list is empty return 0
 
 
 The function named `pop_listint` that removes the head node from a linked list of integers and returns its value. Here's a breakdown of how the code works:
@@ -199,7 +199,7 @@ This function can be used to remove the head node from a linked list of integers
 
 
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
    **Conclusion**
 
 The single linked list is a versatile data structure that can be used to implement a variety of algorithms and applications. The implementation in this file is simple and efficient, and it provides a comprehensive API for managing single linked lists.
