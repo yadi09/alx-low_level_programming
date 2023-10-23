@@ -1,6 +1,8 @@
-Introduction
+     ###Introduction###
 
 This file contains the implementation of a single linked list data structure. A single linked list is a linear data structure that stores a sequence of elements. Each element in the list contains a value and a pointer to the next element in the list.
+
+
 
    ***Task 0***
 - Write a function that prints all the elements of a listint_t list.
@@ -32,6 +34,7 @@ The function named `print_listint` that prints the elements of a linked list of 
 This function can be used to print the elements of a linked list of integers and determine the number of nodes in the list.
 
 
+
    ***Task 1***
 Write a function that returns the number of elements in a linked listint_t list.
 
@@ -54,6 +57,30 @@ The function named `listint_len` that calculates the number of elements (nodes) 
 7. The function returns the value of `num_of_elemrnt`, which represents the number of elements (nodes) in the linked list.
 
 This function can be used to determine the number of elements in a linked list.
+
+
+   ***Task 2***
+Write a function that adds a new node at the beginning of a listint_t list.
+
+Prototype: listint_t *add_nodeint(listint_t **head, const int n);
+Return: the address of the new element, or NULL if it failed
+
+The function named `add_nodeint` that adds a new node at the beginning of a linked list of integers. Here's a breakdown of how the code works:
+
+1. The function `add_nodeint` takes two parameters: `**head`, a pointer to a pointer to the head of the linked list, and `n`, the value to be assigned to the new node.
+
+2. Inside the function, a new node is created using `malloc` to allocate memory for the `listint_t` struct. The `sizeof(listint_t)` is used to determine the size of the struct.
+
+3. The value `n` is assigned to the `n` member of the new node, representing the data stored in the node.
+
+4. The `next` member of the new node is set to the current head of the linked list, making the new node the new head.
+
+5. The pointer `*head` is updated to point to the new node, effectively updating the head of the linked list to the new node.
+
+6. Finally, the function returns the pointer to the new node.
+
+This function can be used to add a new node with a specified value at the beginning of a linked list of integers, updating the head pointer accordingly.
+
 
 
    **Conclusion**
