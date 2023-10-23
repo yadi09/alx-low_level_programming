@@ -200,6 +200,39 @@ This function can be used to remove the head node from a linked list of integers
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   ***Task 7***
+- Write a function that returns the nth node of a listint_t linked list.
+
+- Prototype: listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+- where index is the index of the node, starting at 0
+- if the node does not exist, return NULL
+
+The function named `get_nodeint_at_index` that retrieves a node at a specified index in a linked list of integers. Here's a breakdown of how the code works:
+
+1. The function `get_nodeint_at_index` takes two parameters: `head`, which is a pointer to the head of the linked list, and `index`, which represents the index of the desired node.
+
+2. A temporary pointer `temp` is created and assigned the value of `head`, which points to the head of the linked list. This pointer will be used to traverse the list.
+
+3. An unsigned integer variable `i` is initialized to 0, representing the current index of the traversal.
+
+4. The code enters a while loop that continues as long as `i` is less than `index`, indicating that the desired index has not been reached yet.
+
+5. Inside the loop, `temp` is updated to point to the next node in the list, effectively traversing the list.
+
+6. The variable `i` is incremented to keep track of the current index.
+
+7. Once the loop ends, `temp` points to the node at the desired index in the linked list.
+
+8. The code checks if `temp` is `NULL`, indicating that the desired index is out of bounds (i.e., beyond the end of the list). If it is, the function returns `NULL` to indicate the failure of finding the node at the specified index.
+
+9. If the desired index is within bounds, the function returns the pointer to the node (`temp`).
+
+This function can be used to retrieve the node at a specified index in a linked list of integers. If the index is valid, the function returns the pointer to the node; otherwise, it returns `NULL`.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
    **Conclusion**
 
 The single linked list is a versatile data structure that can be used to implement a variety of algorithms and applications. The implementation in this file is simple and efficient, and it provides a comprehensive API for managing single linked lists.
