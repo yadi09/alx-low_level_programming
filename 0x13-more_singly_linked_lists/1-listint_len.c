@@ -13,7 +13,7 @@ size_t num_of_elemrnt = 0;
 while (h != NULL)
 {
 h = h->next;
-num_of_elemrnt++; 
+num_of_elemrnt++;
 }
 
 return (num_of_elemrnt);
