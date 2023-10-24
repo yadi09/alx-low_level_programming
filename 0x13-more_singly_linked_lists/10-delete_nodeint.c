@@ -30,6 +30,7 @@ if (temp_node->next == NULL)
 return (-1);
 
 temp_node = temp_node->next;
+i++;
 }
 
 temp = temp_node->next;
