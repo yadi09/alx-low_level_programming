@@ -16,8 +16,8 @@ temp = h;
 while (temp)
 {
 printf("%d\n", temp->n);
-temp = temp->next;
 num_of_nodes++;
+temp = temp->next;
 }
 
 return (num_of_nodes);
