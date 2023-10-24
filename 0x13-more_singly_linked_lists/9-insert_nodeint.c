@@ -20,6 +20,19 @@ return ('\0');
 
 newnode->n = n;
 
+if (*head == NULL && idx == 0)
+{
+    *head = newnode;
+    return (newnode);
+}
+
+if (idx == 0 && *head != NULL)
+{
+    newnode->next = *head;
+    *head = newnode;
+    return (newnode);
+}
+
 idx--;
 i = 0;
 while (i < idx)
