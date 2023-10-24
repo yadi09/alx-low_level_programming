@@ -274,6 +274,40 @@ If the linked list is properly constructed and the `n` values in the nodes are v
 - Returns: the address of the new node, or NULL if it failed
 - if it is not possible to add the new node at index idx, do not add the new node and return NULL
 
+The function named `insert_nodeint_at_index` that inserts a new node with a given value at a specified index in a linked list. Here's a breakdown of how the code works:
+
+1. The function `insert_nodeint_at_index` takes three parameters: `head`, which is a pointer to a pointer to the head of the linked list, `idx`, which represents the index at which the new node should be inserted, and `n`, which is the value to be stored in the new node.
+
+2. A temporary pointer `temp` is created and assigned the value of `*head`, which points to the head of the linked list. This pointer will be used to traverse the list.
+
+3. Another temporary pointer `temp_node` is declared to store the node after the insertion point.
+
+4. A new node is created by allocating memory using `malloc(sizeof(listint_t))`. The `newnode` pointer is assigned this memory, and the `n` value is set to the provided value. The `next` pointer of the new node is set to `NULL`.
+
+5. The code checks if `newnode` is `NULL`, indicating a failure in memory allocation. If it is, the function returns `NULL` to indicate the failure to insert the node.
+
+6. If the linked list is empty (`*head == NULL`) and the desired index is 0 (`idx == 0`), the new node becomes the head of the list. The `next` pointer of the new node is set to `NULL`, and the function returns `newnode`.
+
+7. If the desired index is 0 and the linked list is not empty, the new node is inserted at the beginning of the list. The `next` pointer of the new node is set to the current head (`*head`), and the head pointer is updated to point to the new node. Finally, the function returns `newnode`.
+
+8. If the desired index is not 0, the code enters a while loop that continues as long as `i` is less than `idx` and `temp` is not `NULL`.
+
+9. Inside the loop, `temp` is updated to point to the next node in the list, effectively traversing the list.
+
+10. The variable `temp_node` is assigned the value of `temp->next` to store the node after the insertion point.
+
+11. After exiting the loop, if `temp` is `NULL`, indicating that the desired index is out of bounds, the function returns `NULL`.
+
+12. Otherwise, the `next` pointer of `temp` is set to the new node (`temp->next = newnode`), and the `next` pointer of the new node is set to `temp_node`.
+
+13. Finally, the function returns `newnode`, which represents the successfully inserted node.
+
+If the linked list is properly constructed and the index is within bounds, the code should correctly insert the new node at the specified index and return the pointer to the inserted node.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   ***Task 19***
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
    **Conclusion**
