@@ -60,7 +60,7 @@ else
 {
 while (exponent > 0)
 {
-result = result * num;
+result = result *num;
 exponent--;
 }
 }
