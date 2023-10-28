@@ -10,36 +10,36 @@ unsigned int power_of(unsigned int num, unsigned int exponent);
 
 unsigned int binary_to_uint(const char *b)
 {
-    int max = 0, i;
-    unsigned int result;
+int max = 0, i;
+unsigned int result;
 
-    if (b == NULL)
-    return (0);
+if (b == NULL)
+return (0);
 
-    while (b[max] != '\0')
-    max++;
+while (b[max] != '\0')
+max++;
 
-    while (*b)
-    {
-        if (*b != '1' && *b != '0')
-        return (0);
-        else
-        b++;
-    }
-    b--;
+while (*b)
+{
+if (*b != '1' && *b != '0')
+return (0);
+else
+b++;
+}
+b--;
 
-    i = 0;
-    result = 0;
-    while (i < max)
-    {
-        int num = *b - '0';
+i = 0;
+result = 0;
+while (i < max)
+{
+int num = *b - '0';
 
-        result += (num * power_of(2, i));
-        b--;
-        i++;
-    }
-    
-    return (result);
+result += (num * power_of(2, i));
+b--;
+i++;
+}
+
+return (result);
 }
 
 /**
@@ -51,18 +51,18 @@ unsigned int binary_to_uint(const char *b)
 
 unsigned int power_of(unsigned int num, unsigned int exponent)
 {
-    unsigned int result = 1;
+unsigned int result = 1;
 
-    if (exponent == 0)
-    return (1);
-    else
-    {
-        while (exponent > 0)
-        {
-        result = result * num;
-        exponent--;
-        }
-    }
+if (exponent == 0)
+return (1);
+else
+{
+while (exponent > 0)
+{
+result = result * num;
+exponent--;
+}
+}
 
-    return (result);
+return (result);
 }
