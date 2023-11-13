@@ -1,1 +1,0 @@
-0x0E-structures_typedef - is directory for all struct and tyoedef tasks

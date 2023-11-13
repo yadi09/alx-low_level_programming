@@ -1,1 +1,0 @@
-this 0x0B-malloc_free directory holds all tasks with their solution
