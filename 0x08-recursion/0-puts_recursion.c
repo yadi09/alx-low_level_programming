@@ -8,13 +8,11 @@
 
 void _puts_recursion(char *s)
 {
-int i = 1; /*uses for increase pointer of s*/
-
 _putchar(*s); /*one char at a time*/
 
 /*prints the whole string*/
-if (*(s + i) != '\0')
-	_puts_recursion(s + i);
+if (*(++s) != '\0')
+	_puts_recursion(s);
 else
 	_putchar('\n');
 }
