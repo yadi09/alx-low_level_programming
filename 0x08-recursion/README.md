@@ -13,12 +13,23 @@
    ***Tasks***
 
 - The tasks in this directory cover a range of difficulty levels, from beginner to advanced. Each task comes with a detailed description of the problem to be solved, along with clear instructions and hints to guide you through the process.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   ***Task 0***
+-------------------------
+- Write a function that prints a string, followed by a new line.
 
+    - Prototype: void _puts_recursion(char *s);
 
+- The provided code defines a function named _puts_recursion that takes a character pointer s as input. The function recursively prints the characters of the string s one by one. It uses a counter variable i to keep track of the position of the current character in the string. The function calls _putchar to print each character, and then it recursively calls itself to print the next character. The recursion stops when the null terminator \0 is encountered. At that point, the function prints a newline character using _putchar.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   ***Task 1***
+-------------------------
+- Write a function that prints a string in reverse.
 
+     - Prototype: void _print_rev_recursion(char *s);
 
-
+- 
 
 
 
