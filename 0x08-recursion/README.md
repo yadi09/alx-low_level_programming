@@ -95,6 +95,54 @@
     - Prototype: int _sqrt_recursion(int n);
     - If n does not have a natural square root, the function should return -1
 
+- The code defines two functions: _sqr and _sqrt_recursion. Both functions aim to determine the natural square root of a given number. The _sqr function takes two arguments: num and n. It recursively increments num until it finds a value that, when multiplied by itself, equals n. If num ever exceeds n, it returns -1. Otherwise, it returns the final value of num, which is the square root of n. The _sqrt_recursion function simply calls the _sqr function with the input number n and returns the result.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   ***Task 6***
+-------------------------------
+- Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
+
+    - Prototype: int is_prime_number(int n);
+
+- The provided code defines two functions: is_prime_number and prime. Both functions determine whether a given integer is a prime number or not. The is_prime_number function simply calls the prime function with the input number n. The prime function takes two arguments: num and n. It recursively checks whether num is a factor of n. If num is ever greater than or equal to n, it returns 0, indicating that n is not a prime number. Otherwise, it checks if n is divisible by 2 or if num is less than half of n. If either condition is true, it returns 1, indicating that n is a prime number. Otherwise, it continues the recursion with the next value of num. In summary, the code efficiently determines whether a given integer is a prime number using recursion.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   ***Task 7***
+-------------------------------
+- Write a function that returns 1 if a string is a palindrome and 0 if not.
+
+    - Prototype: int is_palindrome(char *s);
+    - An empty string is a palindrome
+
+- The code defines three functions: _strlen, is_same, and is_palindrome. The _strlen function calculates the length of a given string s by recursively incrementing the position of the pointer s until it reaches the null terminator (\0). It returns the total number of characters encountered before reaching the null terminator.
+
+- The is_same function checks whether a given string s is a palindrome, which means it reads the same backward as forward. It takes three arguments: s, n, and num. s is the pointer to the beginning of the string, n is the current position in the string, and num is the total length of the string. The function recursively compares the first and last characters of the string, then moves the pointer inwards until it reaches the middle of the string. If the characters match at each position, it returns 1, indicating that the string is a palindrome. Otherwise, it returns 0.
+
+- The is_palindrome function simply calls the is_same function with the input string s and returns the result. It effectively determines whether the given string is a palindrome or not.
+
+- In summary, the code provides functions for calculating string length and checking whether a string is a palindrome.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   ***Task 8***
+-------------------------------
+- Write a function that compares two strings and returns 1 if the strings can be considered identical, otherwise return 0.
+
+- Prototype: int wildcmp(char *s1, char *s2);
+- s2 can contain the special character *.
+- The special char * can replace any string (including an empty string)
+
+The provided code defines two functions: check and wildcmp. These functions implement a wildcard matching algorithm that determines whether a given string s1 matches a pattern string s2 containing wildcard characters (*).
+
+The check function recursively compares the characters of s1 and s2, taking into account the wildcard character *. It returns 1 if the strings match, and 0 otherwise. The function handles three specific cases:
+
+  - 1, If both s1[i] and s2[j] are null terminators (\0), indicating the end of both strings, it means the strings match and returns 1.
+
+  - 2, If s1[i] and s2[j] are equal, it recursively compares the next characters of s1 and s2 using check(s1, s2, i + 1, j + 1).
+
+  - 3, If s1[i] is a null terminator and s2[j] is an asterisk (*), it means that s1 has ended, but s2 can still match any remaining characters in s1. It recursively compares the current position of s2 with the next possible character in s1 using check(s1, s2, i, j + 1).
+
+  - 4, If s2[j] is an asterisk (*), it means that the wildcard can match zero or more characters in s1. It recursively compares two possibilities:
+      - a. The current position of s1 with the next position of s2 using check(s1, s2, i + 1, j), allowing the wildcard to match zero characters.
+      - b. The current position of s2 with the next possible character in s1 using check(s1, s2, i, j + 1), allowing the wildcard to match one or more characters.
+
+- The wildcmp function simply calls the check function with the input strings s1 and s2 and returns the result. It effectively determines whether s1 matches the pattern s2 using wildcards.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
    ***Conclusion***
 
