@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+/**
+ * _atoi - function that convert str to num
+ * @str: string
+ * Return: converted num
+ **/
+
+int _atoi(char *str)
+{
+int i, num = 0, mult = 1;
+
+if (str == NULL)
+	return ('\0');
+
+for (i = 0; *(str + i) != '\0'; i++)
+{
+if (*(str + i) >= 48 && *(str + i) <= 57)
+{
+	num = (num * mult) + *(str + i);
+	mult *= 10;
+}
+else
+	return (0);
+}
+
+return (num);
+}
+
+/**
+ * main - main function
+ * @argc: number of vector
+ * @argv: vector it self
+ * Return: 0;
+ **/
+
+int main(int argc, char **argv)
+{
+int i, num, sum = 0;
+
+if (argc <= 1)
+{
+	printf("0\n");
+	return (1);
+}
+
+for (i = 1; i < argc; i++)
+{
+num = _atoi(argv[i]);
+
+if (num != 0)
+	sum += atoi(argv[i]);
+else
+{
+	printf("Error\n");
+	return (1);
+}
+}
+
+printf("%d\n", sum);
+
+return (0);
+}
+
