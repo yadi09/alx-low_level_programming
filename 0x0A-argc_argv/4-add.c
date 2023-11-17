@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * main - main function
@@ -20,7 +21,8 @@ if (argc <= 1)
 
 for (i = 1; i < argc; i++)
 {
-num = atoi(argv[i]);
+num = _atoi(argv[i]);
+
 if (num != 0)
 	sum += atoi(argv[i]);
 else
