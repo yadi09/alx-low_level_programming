@@ -13,18 +13,18 @@ int _atoi(char *str)
 int i, num = 0, mult = 1;
 
 if (str == NULL)
-        return ('\0');
+	return ('\0');
 
 for (i = 0; *str != '\0'; i++)
 {
 if (*str >= 48 && *str <= 57)
 {
-        num = (num * mult) + *str;
-        mult *= 10;
-        str++;
+	num = (num * mult) + *str;
+	mult *= 10;
+	str++;
 }
 else
-        return (0);
+	return (0);
 }
 
 return (num);
@@ -44,8 +44,8 @@ int i, num, sum = 0;
 
 if (argc <= 1)
 {
-        printf("0\n");
-        return (1);
+	printf("0\n");
+	return (1);
 }
 
 for (i = 1; i < argc; i++)
@@ -53,11 +53,11 @@ for (i = 1; i < argc; i++)
 num = _atoi(argv[i]);
 
 if (num != 0)
-        sum += atoi(argv[i]);
+	sum += atoi(argv[i]);
 else
 {
-        printf("Error\n");
-        return (1);
+	printf("Error\n");
+	return (1);
 }
 }
 
