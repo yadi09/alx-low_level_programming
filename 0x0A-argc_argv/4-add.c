@@ -42,9 +42,9 @@ int main(int argc, char **argv)
 {
 int i, num, sum = 0;
 
-if (argc <= 1)
+if (argc == 1)
 {
-        printf("0\n");
+        printf("%d\n", 0);
         return (0);
 }
 
