@@ -14,7 +14,7 @@ int i, j, sum = 0;
 
 if (argc <= 1)
 {
-	printf("%d\n", 0);
+	printf("0\n");
 	return (0);
 }
 
