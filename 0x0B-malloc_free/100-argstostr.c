@@ -22,7 +22,6 @@ while (av[i][j] != '\0')
 	j++;
 max += j + 1;
 }
-max += (ac + 1);
 
 str = malloc(sizeof(char) * max);
 if (str == NULL)
