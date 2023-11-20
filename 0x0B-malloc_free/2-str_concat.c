@@ -20,7 +20,7 @@ while (s2[max2] != '\0')
 	max2++;
 
 if (s1 == NULL && s2 == NULL)
-	str_cat = "";
+	str_cat = NULL;
 
 str_cat = malloc(sizeof(char) * (max1 + max2 + 1));
 if (str_cat == NULL)
