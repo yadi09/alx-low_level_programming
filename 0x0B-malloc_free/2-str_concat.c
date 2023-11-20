@@ -22,7 +22,7 @@ while (s2[max2] != '\0')
 if (s1 == NULL && s2 == NULL)
 	str_cat = "";
 
-str_cat = malloc(sizeof(char) * (max1 + max2));
+str_cat = malloc(sizeof(char) * (max1 + max2 + 1));
 if (str_cat == NULL)
 	return ('\0');
 
@@ -43,6 +43,7 @@ if (s2 != NULL)
 	j++;
 	}
 }
+str_cat[i] = '\0';
 
 return (str_cat);
 }
