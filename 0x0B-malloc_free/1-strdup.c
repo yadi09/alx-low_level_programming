@@ -10,7 +10,7 @@ char *_strdup(char *str)
 {
 unsigned int i;
 char *new_ptr;
-int max;
+unsigned int max;
 
 if (str == NULL)
 	return ('\0');
@@ -23,7 +23,7 @@ if (new_ptr == NULL)
 	return ('\0');
 
 i = 0;
-while (i < sizeof(str))
+while (i < max)
 {
 	new_ptr[i] = str[i];
 	i++;
