@@ -10,11 +10,15 @@ char *_strdup(char *str)
 {
 unsigned int i;
 char *new_ptr;
+int max;
 
 if (str == NULL)
 	return ('\0');
+max = 0;
+while (str[max] != '\0')
+	max++;
 
-new_ptr = malloc(sizeof(str));
+new_ptr = malloc(sizeof(char) * max + 1);
 if (new_ptr == NULL)
 	return ('\0');
 
@@ -24,6 +28,7 @@ while (i < sizeof(str))
 	new_ptr[i] = str[i];
 	i++;
 }
+new_ptr[i] = '\0';
 
 return (new_ptr);
 }
