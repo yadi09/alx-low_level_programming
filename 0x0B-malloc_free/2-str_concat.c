@@ -7,7 +7,6 @@
  * Return: newly allocated space
  **/
 
-
 char *str_concat(char *s1, char *s2)
 {
 int max1 = 0, max2 = 0, i = 0, j = 0;
@@ -20,7 +19,6 @@ if (s2 == NULL)
 
 while (s1[max1] != '\0')
 	max1++;
-
 while (s2[max2] != '\0')
 	max2++;
 
