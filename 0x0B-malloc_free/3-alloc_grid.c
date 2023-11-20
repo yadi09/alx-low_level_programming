@@ -26,7 +26,7 @@ if (*(arr + i) == NULL)
 {
 for (j = 0; j < i; j++)
 {
-	free(*(arr + i));
+	free(*(arr + j));
 	j++;
 }
 	free(arr);
