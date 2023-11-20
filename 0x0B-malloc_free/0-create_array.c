@@ -16,7 +16,7 @@ unsigned int i;
 if (size == 0)
 	return ('\0');
 
-str = malloc(sizeof(char) * size + 1);
+str = malloc(sizeof(char) * size);
 if (str == NULL)
 	return ('\0');
 
@@ -27,7 +27,6 @@ str[i] = c;
 i++;
 }
 
-str[i] = '\0';
 
 return (str);
 }
