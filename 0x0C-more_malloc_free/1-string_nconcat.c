@@ -1,41 +1,6 @@
 #include "main.h"
 
 /**
- * concat_str - concatenates two string
- * @s1: the first string
- * @s2: the second string
- * @new_str: pointer to concatenate string
- * @max1: number of character of s1
- * @max2: number of character of s2
- * @n: number of char of s2 has to be concat
- * Return: pointer to new concat string if fails NULL
- **/
-
-char *concat_str(char *s1, char *s2, char *new_str,
-unsigned int max1, unsigned int max2, unsigned int n)
-{
-unsigned int i = 0, j = 0;
-
-while (i < max1)
-{
-	new_str[i] = s1[i];
-	i++;
-}
-
-while (j < max2 && j < n)
-{
-new_str[i] = s2[j];
-i++;
-j++;
-}
-
-new_str[i] = s2[j];
-
-return (new_str);
-}
-
-
-/**
  * string_nconcat - function that concatenates two strings.
  * @s1: string one
  * @s2: string two
@@ -46,6 +11,7 @@ return (new_str);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 unsigned int max1 = 0, max2 = 0;
+unsigned int i, j;
 char *new_str;
 
 if (s1 == NULL)
@@ -66,7 +32,13 @@ else
 if (new_str == NULL)
 	return (NULL);
 
-new_str = concat_str(s1, s2, new_str, max1, max2, n);
+for (i = 0; i < max1; i++)
+	new_str[i] = s1[i];
+
+for (j = 0; j < max2 && j < n; j++, i++)
+	new_str[i] = s2[j];
+
+new_str[i] = '\0';
 
 return (new_str);
 }
