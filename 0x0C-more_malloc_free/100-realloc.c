@@ -18,8 +18,7 @@ if (new_size == 0 && ptr != NULL)
 	free(ptr);
 	return (NULL);
 }
-else if (new_size == 0)
-	return (NULL);
+
 if (new_size == old_size)
 	return (ptr);
 
