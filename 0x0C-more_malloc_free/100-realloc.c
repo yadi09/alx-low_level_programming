@@ -34,14 +34,14 @@ if (ptr == NULL)
 new_ptr = malloc(new_size);
 if (new_ptr == NULL)
 	return (NULL);
-while (i < old_size && (new_ptr + i) != NULL)
+while (i < old_size && i < new_size)
 {
 	new_ptr[i] = 0;
 	i++;
 }
 
 i = 0;
-while (*((char *)ptr + i) != '\0' && (new_ptr + i) != NULL)
+while (i < old_size && i < new_size)
 {
 	*(new_ptr + i) = *((char *)ptr + i);
 	i++;
