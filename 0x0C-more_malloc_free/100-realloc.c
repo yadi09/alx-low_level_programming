@@ -21,7 +21,7 @@ if (new_size == 0 && ptr != NULL)
 else if (new_size == 0)
 	return (NULL);
 if (new_size == old_size)
-	return (NULL);
+	return (ptr);
 
 if (ptr == NULL)
 {
