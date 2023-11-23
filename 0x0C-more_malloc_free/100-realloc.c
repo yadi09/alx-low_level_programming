@@ -47,5 +47,5 @@ while (i < old_size && i < new_size)
 	i++;
 }
 free(ptr);
-return ((void *)new_ptr);
+return (new_ptr);
 }
