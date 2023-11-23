@@ -34,11 +34,6 @@ if (ptr == NULL)
 new_ptr = malloc(new_size);
 if (new_ptr == NULL)
 	return (NULL);
-while (i < old_size && i < new_size)
-{
-	new_ptr[i] = 0;
-	i++;
-}
 
 i = 0;
 while (i < old_size && i < new_size)
