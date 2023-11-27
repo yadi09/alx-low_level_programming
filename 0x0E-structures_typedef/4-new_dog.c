@@ -51,17 +51,14 @@ dog_t *new_dog(char *name, float age, char *owner)
         free(dup_name);
         return('\0');
     }
-
-    _strcpy(dup_name, name);
-    _strcpy(dup_owner, owner);
     
     new__dog = malloc(sizeof(dog_t));
     if (new__dog == NULL)
     return (NULL);
 
-    new__dog->name = dup_name;
+    new__dog->name = _strcpy(dup_name, name);
     new__dog->age = age;
-    new__dog->owner = dup_owner;
+    new__dog->owner = _strcpy(dup_owner, owner);
 
     return (new__dog);
 }
