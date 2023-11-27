@@ -1,0 +1,2 @@
+   ***0x0D-preprocessor***
+This directory contains tasks and solutions related to the C preprocessor. The C preprocessor is a powerful tool that can be used to perform text manipulation and code generation before the C compiler runs. It can be used to define macros, include header files, and conditionalize code.
