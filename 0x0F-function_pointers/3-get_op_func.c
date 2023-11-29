@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdlib.h>
 
 /**
  * get_op_func - function
@@ -8,7 +9,7 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = {
+op_t ops[] = {
 	{"+", op_add},
 	{"-", op_sub},
 	{"*", op_mul},
@@ -27,5 +28,5 @@ return (ops[i].f);
 i++;
 }
 
-return ('\0');
+return (0);
 }

@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - main function
@@ -17,14 +18,6 @@ if (argc != 4)
 {
 printf("Error\n");
 exit(98);
-}
-if (atoi(argv[3]) == 0)
-{
-if (*(argv[2]) == '/' || *(argv[2]) == '%')
-{
-printf("Error\n");
-exit(100);
-}
 }
 
 get_func = get_op_func(argv[2]);
