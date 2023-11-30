@@ -43,7 +43,7 @@ ptr = va_arg(all, char*);
 if (ptr)
 {printf("%s", ptr);
 break; }
-printf("%p", ptr);
+printf("%s", "(nil)");
 break; }
 i++;
 }
