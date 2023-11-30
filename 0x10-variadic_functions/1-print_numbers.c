@@ -20,9 +20,8 @@ for (i = 0; i < n; i++)
 
 	if (separator != NULL && i != (n - 1))
 		printf("%s", separator);
-	else
-		printf("\n");
 }
+printf("\n");
 va_end(ap);
 
 return;
