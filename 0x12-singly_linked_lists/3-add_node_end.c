@@ -13,16 +13,16 @@ list_t *add_node_end(list_t **head, const char *str)
 list_t *new_node;
 unsigned int length = 0;
 
-if (head == NULL && *head == NULL && str == NULL)
+if (str == NULL)
 {
-printf("Error");
-return ('\0');
+write(1, "(str fail)!!!", 13);
+return (NULL);
 }
 new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
 {
-printf("Error");
-return ('\0');
+write(1, "(malloc fail)!!!", 16);
+return (NULL);
 }
 
 while (str[length] != '\0')
@@ -33,8 +33,8 @@ new_node->str = strdup(str);
 new_node->next = NULL;
 if (new_node->str == NULL)
 {
-printf("Error");
-return ('\0');
+write(1, "(new_node->str fail)!!!", 23);
+return (NULL);
 }
 
 if (*head == NULL)
