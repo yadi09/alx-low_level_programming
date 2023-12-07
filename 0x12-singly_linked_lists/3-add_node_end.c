@@ -31,11 +31,6 @@ length++;
 new_node->len = length;
 new_node->str = strdup(str);
 new_node->next = NULL;
-if (new_node->str == NULL)
-{
-write(1, "(new_node->str fail)!!!", 23);
-return (NULL);
-}
 
 if (*head == NULL)
 *head = new_node;
