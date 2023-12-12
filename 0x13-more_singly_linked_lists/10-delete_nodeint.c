@@ -22,6 +22,7 @@ if (index == 0)
 single_temp = temp->next;
 free(temp);
 *head = single_temp;
+return (1);
 }
 
 for (i = 0; i <= index && temp != NULL; i++)
