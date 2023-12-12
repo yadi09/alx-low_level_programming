@@ -26,6 +26,13 @@ return (NULL);
 
 new_node->n = n;
 
+if (idx == 0)
+{
+	new_node->next = temp;
+	*head = new_node;
+	return (new_node);
+}
+
 for (i = 0; i <= idx && temp != NULL; i++)
 {
 if (i == (idx - 1))
