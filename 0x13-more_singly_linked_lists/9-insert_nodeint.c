@@ -15,7 +15,7 @@ listint_t *new_node;
 listint_t *temp;
 listint_t *single_temp;
 
-if (*head == NULL || head == NULL)
+if (*head == NULL && idx != 0)
 return (NULL);
 
 temp = *head;
