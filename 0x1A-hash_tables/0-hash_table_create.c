@@ -13,18 +13,12 @@ unsigned long int i = 0;
 
 hash_table_t *hash_table = malloc(sizeof(hash_table_t));
 if (hash_table == NULL)
-{
-perror("malloc fail!!!\n");
 return (NULL);
-}
 
 hash_table->size = size;
 hash_table->array = calloc(size, sizeof(hash_node_t *));
 if (hash_table->array == NULL)
-{
-perror("calloc error!!!\n");
 return (NULL);
-}
 
 while (i < size)
 {
