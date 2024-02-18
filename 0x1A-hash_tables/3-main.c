@@ -17,7 +17,6 @@ int main(void)
     hash_table_set(ht, "Name", "Yadamzer");
     hash_table_set(ht, "hetairas", "111");
     hash_table_set(ht, "mentioner", "222");
-    
-    
+
     return (EXIT_SUCCESS);
 }
