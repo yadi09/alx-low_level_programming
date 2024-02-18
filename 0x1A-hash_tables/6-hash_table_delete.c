@@ -14,10 +14,10 @@ hash_node_t *temp, *node;
 if (ht == NULL)
 return;
 
-for(i = 0; i < ht->size; i++)
+for (i = 0; i < ht->size; i++)
 {
 node = ht->array[i];
-while(node != NULL)
+while (node != NULL)
 {
 temp = node->next;
 free(node->key);
