@@ -13,7 +13,6 @@ unsigned long int i, to_check = 0;
 
 if (ht == NULL)
 {
-printf("{}\n");
 return;
 }
 
