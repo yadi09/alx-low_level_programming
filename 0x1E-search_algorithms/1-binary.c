@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
- * recursive_search - .............
- * @array: ........
+ * search - .............
+ * @arr: ........
  * @size: .......
- * @value: ..........
+ * @val: ..........
  * Return: ............
  */
 
@@ -20,27 +20,20 @@ printf("Searching in array");
 
 for (i = 0; i < size; i++)
 {
-if (i == 0) {
+if (i == 0)
 printf("%s %d", ":", arr[i]);
-} else {
+else
 printf("%s %d", ",", arr[i]);
 }
-}      
 printf("\n");
 
 if (hf && size % 2 == 0)
-{
 hf--;
-}
-
 if (val == arr[hf])
 return ((int)hf);
-
 if (val < arr[hf])
 return (search(arr, hf, val));
-
 hf++;
-
 return (search(arr + hf, size - hf, val) + hf);
 }
 
@@ -48,15 +41,13 @@ return (search(arr + hf, size - hf, val) + hf);
  * binary_search - .............
  * @array: ........
  * @size: ..........
- * @value: ..........
+ * @val: ..........
  * Return: .........
  */
 int binary_search(int *array, size_t size, int val)
 {
 int idx;
-
 idx = search(array, size, val);
-
 if (idx >= 0 && array[idx] != val)
 return (-1);
 
